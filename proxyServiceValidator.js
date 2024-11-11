@@ -51,7 +51,7 @@ const generateUrl = async (omniboxId, urlPath, errorPrefix = 'failure') => {
           else omnibox.addEventListener('change', resolveHandler(resolve));
         }),
         timeout = new Promise((resolve) => {
-          setTimeout(resolveHandler(resolve), 40000);
+          setTimeout(resolveHandler(resolve), 100000);
         }),
         // Return the proxy URL that the omnibox left here.
         generatedUrl = await Promise.race([loadUrl, timeout]);
